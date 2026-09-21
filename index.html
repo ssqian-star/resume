@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>胡芊 · 数据分析实习生简历</title>
+<meta name="description" content="胡芊的个人简历 — 求职意向：数据分析实习生 / 商业分析实习生">
+<style>
+  :root{
+    --rose:#D6336C;
+    --rose-soft:#F7DEE7;
+    --plum:#5A3E4C;
+    --muted:#9C7B8A;
+    --ink:#3D2E36;
+    --bg:#FBF6F8;
+    --card:#FFFFFF;
+    --line:#F0DDE5;
+    --shadow:0 10px 30px rgba(90,62,76,.08);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+    font-size:15px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:920px;
+    margin:32px auto 64px;
+    padding:0 20px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(135deg,#FFFFFF 0%,#FDF1F6 55%,#F9E3EC 100%);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:34px 36px;
+    display:flex;
+    gap:26px;
+    align-items:center;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-70px;top:-70px;
+    width:220px;height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,rgba(214,51,108,.16),rgba(214,51,108,0) 70%);
+  }
+  .avatar{
+    flex:0 0 auto;
+    width:84px;height:84px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--rose),#B8265B);
+    color:#fff;
+    font-size:34px;
+    font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+    letter-spacing:2px;
+    box-shadow:0 8px 20px rgba(214,51,108,.28);
+    z-index:1;
+  }
+  .hero-main{z-index:1;}
+  .hero h1{
+    margin:0 0 4px;
+    font-size:30px;
+    letter-spacing:4px;
+    color:var(--plum);
+    font-weight:700;
+  }
+  .objective{
+    margin:0 0 14px;
+    color:var(--rose);
+    font-weight:600;
+    font-size:15px;
+  }
+  .contact{
+    list-style:none;
+    margin:0;padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    font-size:13.5px;
+    color:var(--muted);
+  }
+  .contact li{display:flex;align-items:center;gap:6px;}
+  .contact svg{width:14px;height:14px;flex:0 0 auto;stroke:var(--rose);opacity:.85;}
+
+  /* ---------- Sections ---------- */
+  section{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:0 4px 16px rgba(90,62,76,.05);
+    padding:24px 30px 26px;
+    margin-top:20px;
+  }
+  .sec-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0 0 18px;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:var(--plum);
+  }
+  .sec-title::before{
+    content:"";
+    width:4px;height:17px;
+    border-radius:3px;
+    background:linear-gradient(var(--rose),#B8265B);
+  }
+  .sec-title::after{
+    content:"";
+    flex:1;height:1px;
+    background:linear-gradient(90deg,var(--line),transparent);
+  }
+
+  /* ---------- Education ---------- */
+  .edu{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:6px 24px;
+  }
+  .edu .when{
+    color:var(--rose);
+    font-weight:600;
+    font-size:14px;
+    padding-top:2px;
+  }
+  .edu .school{font-weight:700;color:var(--plum);font-size:15.5px;letter-spacing:.5px;}
+  .edu .dept{color:var(--muted);font-size:13.5px;margin-top:1px;}
+  .edu .major{font-weight:700;color:var(--plum);margin-bottom:4px;}
+  .edu .major span{font-weight:400;color:var(--muted);font-size:13.5px;margin-left:6px;}
+
+  /* ---------- Lists ---------- */
+  ul.bullets{
+    list-style:none;
+    margin:6px 0 0;
+    padding:0;
+  }
+  ul.bullets li{
+    position:relative;
+    padding-left:16px;
+    margin:5px 0;
+    font-size:14px;
+    color:#4A3A42;
+  }
+  ul.bullets li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.72em;
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--rose);
+    opacity:.75;
+  }
+  .kv{
+    font-size:14px;
+    color:#4A3A42;
+    margin:6px 0;
+  }
+  .kv b{color:var(--plum);}
+  .kv .sep{color:var(--line);margin:0 8px;}
+
+  /* ---------- Skills ---------- */
+  .skills{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px 26px;
+    margin-bottom:16px;
+  }
+  .skill{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    padding:7px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:14px;
+  }
+  .skill .name{
+    flex:0 0 auto;
+    font-weight:700;
+    color:var(--plum);
+  }
+  .skill .desc{
+    color:var(--muted);
+    font-size:13px;
+    margin-left:auto;
+    text-align:right;
+  }
+  .tools{
+    font-size:13.5px;
+    color:#4A3A42;
+    background:#FDF3F7;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:10px 14px;
+  }
+  .tools b{color:var(--plum);}
+
+  /* ---------- Timeline ---------- */
+  .item{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:4px 24px;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .item:first-of-type{border-top:none;padding-top:2px;}
+  .item .side .when{
+    color:var(--rose);
+    font-weight:600;
+    font-size:14px;
+  }
+  .item .side .kind{
+    color:var(--muted);
+    font-size:12.5px;
+    margin-top:2px;
+  }
+  .item .side .stack{
+    color:var(--muted);
+    font-size:12.5px;
+    margin-top:4px;
+    line-height:1.5;
+  }
+  .item .body .title{
+    font-weight:700;
+    color:var(--plum);
+    font-size:15px;
+    margin-bottom:2px;
+  }
+  .item .body .role{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:2px;
+  }
+  .item .body .role b{color:var(--rose);font-weight:600;}
+
+  /* ---------- Honors ---------- */
+  .honors{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:4px 24px;
+  }
+  .honors li{
+    position:relative;
+    padding-left:20px;
+    font-size:14px;
+    color:#4A3A42;
+    margin:4px 0;
+    list-style:none;
+  }
+  .honors li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.42em;
+    width:11px;height:11px;
+    background:linear-gradient(135deg,var(--rose),#E8769F);
+    clip-path:polygon(50% 0%,61% 35%,97% 35%,68% 57%,79% 92%,50% 70%,21% 92%,32% 57%,3% 35%,39% 35%);
+  }
+
+  /* ---------- Summary ---------- */
+  .summary{
+    font-size:14px;
+    color:#4A3A42;
+    background:#FDF6F9;
+    border-left:3px solid var(--rose);
+    border-radius:0 10px 10px 0;
+    padding:14px 18px;
+    margin-bottom:14px;
+    line-height:1.9;
+  }
+
+  /* ---------- Tags ---------- */
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-size:13px;
+    color:#8A4A63;
+    background:#FBEAF1;
+    border:1px solid #F3D4E0;
+    border-radius:999px;
+    padding:4px 14px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:12.5px;
+    margin-top:26px;
+  }
+
+  /* ---------- Print button ---------- */
+  .print-btn{
+    position:fixed;
+    right:24px;bottom:24px;
+    background:var(--rose);
+    color:#fff;
+    border:none;
+    border-radius:999px;
+    padding:12px 22px;
+    font-size:14px;
+    font-family:inherit;
+    cursor:pointer;
+    box-shadow:0 8px 22px rgba(214,51,108,.35);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .print-btn:hover{background:#B8265B;transform:translateY(-2px);}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:720px){
+    .page{margin:16px auto 48px;padding:0 14px;}
+    .hero{flex-direction:column;align-items:flex-start;padding:26px 22px;gap:16px;}
+    .hero h1{font-size:25px;}
+    .edu,.item{grid-template-columns:1fr;gap:2px;}
+    .skills,.honors{grid-template-columns:1fr;}
+    .skill .desc{margin-left:0;text-align:left;}
+    section{padding:20px 18px 22px;}
+    .print-btn{right:14px;bottom:14px;padding:10px 18px;}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    @page{size:A4;margin:12mm 10mm;}
+    body{background:#fff;font-size:11.5px;line-height:1.6;}
+    .page{max-width:none;margin:0;padding:0;}
+    .hero,section{box-shadow:none;border-color:#EADCE2;break-inside:avoid;}
+    .hero{padding:18px 22px;}
+    section{padding:14px 20px 16px;margin-top:12px;}
+    .avatar{width:64px;height:64px;font-size:26px;}
+    .hero h1{font-size:22px;}
+    .print-btn{display:none;}
+    .item{padding:10px 0;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="avatar">胡</div>
+    <div class="hero-main">
+      <h1>胡芊</h1>
+      <p class="objective">求职意向：数据分析实习生 / 商业分析实习生</p>
+      <ul class="contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          138-0000-0000
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          huqian@example.com
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          微信 huqian_2023
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          辽宁 · 大连
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          共青团员
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h2 class="sec-title">教 育 背 景</h2>
+      <div class="edu">
+        <div>
+          <div class="when">2023.09 — 2027.06</div>
+          <div class="school">大连财经学院</div>
+          <div class="dept">管理学院 · 辽宁 · 大连</div>
+        </div>
+        <div>
+          <div class="major">大数据管理与应用（本科）<span>主修方向：数据分析与商业智能</span></div>
+          <ul class="bullets">
+            <li>管理学与大数据技术交叉培养，主修方向为数据分析与商业智能</li>
+            <li>预计 2027 年 6 月毕业，可全职实习</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">专 业 课 程</h2>
+      <div class="kv"><b>核心课程：</b>Python 程序设计<span class="sep">/</span>数据库原理<span class="sep">/</span>数据可视化<span class="sep">/</span>大数据分析<span class="sep">/</span>统计学<span class="sep">/</span>数据结构<span class="sep">/</span>管理学原理</div>
+      <div class="kv"><b>相关课程：</b>会计学原理<span class="sep">/</span>运筹学<span class="sep">/</span>计算机网络基础<span class="sep">/</span>市场营销学<span class="sep">/</span>财务管理</div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">专 业 技 能</h2>
+      <div class="skills">
+        <div class="skill"><span class="name">Python（pandas / numpy）</span><span class="desc">数据清洗、聚合统计、批处理脚本</span></div>
+        <div class="skill"><span class="name">SQL 数据查询</span><span class="desc">多表连接、窗口函数、分组聚合</span></div>
+        <div class="skill"><span class="name">Excel（函数 / 透视表）</span><span class="desc">快速核算与临时分析</span></div>
+        <div class="skill"><span class="name">MySQL</span><span class="desc">建库建表、索引、视图与存储过程</span></div>
+        <div class="skill"><span class="name">数据库设计与建模</span><span class="desc">ER 建模、星型模型、三范式</span></div>
+        <div class="skill"><span class="name">ECharts / Tableau</span><span class="desc">交互式图表与看板搭建</span></div>
+        <div class="skill"><span class="name">Power BI</span><span class="desc">基础建模与报表发布</span></div>
+        <div class="skill"><span class="name">数据清洗与质量控制</span><span class="desc">缺失值、异常值、一致性校验</span></div>
+        <div class="skill"><span class="name">分析报告撰写</span><span class="desc">结构化结论与可执行建议</span></div>
+        <div class="skill"><span class="name">团队协作与汇报</span><span class="desc">任务拆解、进度同步、成果汇报</span></div>
+      </div>
+      <div class="tools"><b>常用工具：</b>Python / SQL / MySQL / Excel / ECharts / Tableau / Power BI / Navicat / Git / VS Code</div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">项 目 与 实 践</h2>
+
+      <div class="item">
+        <div class="side">
+          <div class="when">2024.09 — 2024.12</div>
+          <div class="kind">课程综合项目</div>
+          <div class="stack">Python · MySQL · ECharts</div>
+        </div>
+        <div class="body">
+          <div class="title">校园二手交易平台运营数据分析</div>
+          <div class="role">项目负责人 / <b>数据分析</b></div>
+          <ul class="bullets">
+            <li>使用 pandas 对 1.2 万条交易记录进行清洗，处理缺失值、重复值与异常价格，数据可用率由 78% 提升至 96%</li>
+            <li>基于 MySQL 设计「用户—商品—订单」星型模型，编写 20+ 条 SQL 完成复购率、品类偏好、留存等主题分析</li>
+            <li>使用 ECharts 输出 8 张可视化图表并搭建分析看板，撰写 3000 字分析报告，提出 3 条可落地的运营建议</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="side">
+          <div class="when">2025.03 — 2025.06</div>
+          <div class="kind">自主练习项目</div>
+          <div class="stack">Python · pandas · matplotlib</div>
+        </div>
+        <div class="body">
+          <div class="title">学生成绩与学习行为关联分析</div>
+          <div class="role"><b>数据分析</b></div>
+          <ul class="bullets">
+            <li>整合教务成绩与图书馆借阅记录，完成字段对齐与去重，构建 3000+ 条学生画像样本</li>
+            <li>通过相关性分析与分组对比，识别影响学业表现的关键行为因素，输出 5 条教学改进建议</li>
+            <li>沉淀可复用的数据清洗脚本模板，将同类数据处理耗时缩短约 40%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="side">
+          <div class="when">2025.09 — 2025.11</div>
+          <div class="kind">校内实践</div>
+          <div class="stack">Excel · Power BI</div>
+        </div>
+        <div class="body">
+          <div class="title">学院活动报名数据可视化看板</div>
+          <div class="role"><b>数据分析与可视化</b></div>
+          <ul class="bullets">
+            <li>梳理报名流程数据口径，统一 6 类活动的统计维度，消除跨表统计差异</li>
+            <li>搭建 Power BI 看板，活动负责人可自助查看报名趋势与人群分布，替代人工周报</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">校 园 经 历</h2>
+
+      <div class="item">
+        <div class="side">
+          <div class="when">2023.09 — 至今</div>
+          <div class="kind">管理学院 · 班级</div>
+        </div>
+        <div class="body">
+          <div class="title">学习委员</div>
+          <ul class="bullets">
+            <li>负责课程资料整理与作业汇总，累计组织 10+ 次课程小组学习与考前复习</li>
+            <li>协助老师完成课堂数据登记与统计，形成班级学习情况台账</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="side">
+          <div class="when">2024.04 — 2024.07</div>
+          <div class="kind">校青年志愿者协会</div>
+        </div>
+        <div class="body">
+          <div class="title">干事</div>
+          <ul class="bullets">
+            <li>参与校园迎新、图书馆整理等志愿服务，累计服务时长 60 小时以上</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">荣 誉 与 证 书</h2>
+      <ul class="honors">
+        <li>2024—2025 学年 校级三等奖学金</li>
+        <li>2024 年 管理学院数据分析竞赛 三等奖</li>
+        <li>2023—2024 学年 校级优秀学生干部</li>
+        <li>全国计算机等级考试 二级 Python 语言程序设计</li>
+        <li>全国大学英语四级（CET-4）</li>
+        <li>普通话水平测试 二级甲等</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="sec-title">自 我 评 价</h2>
+      <div class="summary">管理学院的培养让我习惯从业务问题出发拆解数据需求，而不是堆砌技术。目前具备「取数—清洗—分析—可视化—汇报」的完整基本功，做事细致、交付规范，正在系统补强统计学与机器学习基础，希望在实际业务场景中持续成长。</div>
+      <ul class="bullets">
+        <li><b>数据基本功扎实：</b>熟悉 SQL 查询与 Python 数据处理，能独立完成端到端的数据分析任务</li>
+        <li><b>业务视角优先：</b>管理学与大数据交叉背景，善于把模糊的业务问题转成可量化的分析目标</li>
+        <li><b>交付规范细致：</b>注重口径统一与过程可复现，习惯沉淀脚本与文档</li>
+        <li><b>沟通协作稳定：</b>多次小组项目负责人经历，乐于同步进度、主动补位</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="sec-title">兴 趣 爱 好</h2>
+      <div class="tags">
+        <span class="tag">数据可视化作品临摹</span>
+        <span class="tag">阅读</span>
+        <span class="tag">羽毛球</span>
+        <span class="tag">摄影</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>更新日期：2026 年 09 月　·　感谢您的时间与考虑</footer>
+</div>
+
+<button class="print-btn" onclick="window.print()">打印 / 导出 PDF</button>
+</body>
+</html>
